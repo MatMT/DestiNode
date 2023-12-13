@@ -1,30 +1,30 @@
-import Sequelize from "sequelize";
-import db from "../config/db";
+import Sequelice from "sequelize";
+import db from "../config/db.js";
 
 export const Viaje = db.define('viajes', {
     // Columnas o propiedas en la tabla 
     titulo: {
-        type: Sequelize.STRING
+        type: Sequelice.STRING
     },
     precio: {
-        type: Sequelize.STRING
+        type: Sequelice.STRING
     },
-    fecha_go: {
-        type: Sequelize.DATE
+    fecha_ida: {
+        type: Sequelice.DATE
     },
-    fecha_return: {
-        type: Sequelize.DATE
+    fecha_vuelta: {
+        type: Sequelice.DATE
     },
     imagen: {
-        type: Sequelize.STRING
+        type: Sequelice.STRING
     },
-    desc: {
-        type: Sequelize.STRING
+    descripcion: {
+        type: Sequelice.STRING
     },
-    disp: {
-        type: Sequelize.STRING
+    disponibles: {
+        type: Sequelice.STRING
     },
     slug: {
-        type: Sequelize.STRING
+        type: Sequelice.STRING
     }
 });

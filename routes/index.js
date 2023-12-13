@@ -1,34 +1,18 @@
 import express from 'express';
+import { pageInicio, pageNosotros, pageViajes, pageTestimonios, pageDetailsViaje } from '../controllers/PaginasController.js';
+import { storeTestimonio } from '../controllers/TestimonioController.js';
 
 const router = express.Router();
 
-router.get('/', (req, res) => {
-    // req - lo que enviamos : res - respuesta de express
-    res.render('inicio', {
-        pagina: 'Inicio'
-    });
-})
+router.get('/', pageInicio);
 
-router.get('/nosotros', (req, res) => {
-    // req - lo que enviamos : res - respuesta de express
-    res.render('nosotros', {
-        pagina: 'Nostros'
-    });
-})
+router.get('/nosotros', pageNosotros)
 
-router.get('/viajes', (req, res) => {
-    // req - lo que enviamos : res - respuesta de express
-    res.render('viajes', {
-        pagina: 'Viajes'
-    });
-})
+router.get('/viajes', pageViajes)
 
-router.get('/testimonios', (req, res) => {
-    // req - lo que enviamos : res - respuesta de express
-    res.render('testimonios', {
-        pagina: 'Testimonios'
-    });
-})
+router.get('/viajes/:slug', pageDetailsViaje)
 
+router.get('/testimonios', pageTestimonios)
+router.post('/testimonios', storeTestimonio)
 
 export default router;
