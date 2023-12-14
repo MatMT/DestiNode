@@ -1,9 +1,11 @@
 import { Viaje } from "../models/Viaje.js"
+import { Testimonio } from "../models/Testimonios.js";
 
 // req - lo que enviamos : res - respuesta de express
 const pageInicio = (req, res) => {
     res.render('inicio', {
-        pagina: 'Inicio'
+        pagina: 'Inicio',
+        clase: 'home'
     });
 }
 
@@ -39,10 +41,21 @@ const pageDetailsViaje = async (req, res) => {
     }
 };
 
-const pageTestimonios = (req, res) => {
-    res.render('testimonios', {
-        pagina: 'Testimonios'
-    });
+const pageTestimonios = async (req, res) => {
+
+    try {
+        const testimonios = await Testimonio.findAll();
+
+        res.render('testimonios', {
+            pagina: 'Testimonios',
+            testimonios
+        });
+
+    } catch (error) {
+        console.log(error);
+    }
+
+
 }
 
 // Exportando los parametros de las paginas
