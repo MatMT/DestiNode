@@ -19,7 +19,7 @@ const storeTestimonio = async (req, res) => {
     if (errores.length > 0) {
 
         // Consultar testimonios existentes
-        const testimonios = await Testimonio.findAll();
+        const testimonios = await Testimonio.findAll({ limit: 3 });
 
         // Mostrar vista con errores
         res.render('testimonios', {

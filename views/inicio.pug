@@ -12,5 +12,23 @@ block contenido
             .col-md-6
                 p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sed, quidem labore, id molestias sit distinctio provident quibusdam cupiditate quas voluptatibus tenetur quod soluta placeat aspernatur veniam. Voluptate dolorem sapiente nisi!Veritatis, incidunt! Sequi enim a nulla minus ut? Odio sint quidem eligendi itaque ab vero suscipit recusandae animi. Obcaecati maxime laboriosam natus, pariatur placeat corrupti! Repudiandae quam voluptates optio suscipit.
                 p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum incidunt voluptate explicabo nobis neque quos corporis fuga dolore deserunt, nemo perferendis maxime ad possimus ducimus necessitatibus odio sit itaque? Dolor! Sequi enim a nulla minus ut? Odio sint quidem eligendi itaque ab vero suscipit recusandae animi. Obcaecati maxime laboriosam natus, pariatur placeat corrupti! Repudiandae quam voluptates optio suscipit.
+
             .col-md-6
-                img(src="/img/inicio_nosotros.jpg", alt="imagen nosotros", class="img-fluid")
+                img(src="/img/inicio_nosotros.jpg" alt="imagen nosotros" class="img-fluid")
+
+            include ./layout/bloque_viajes.pug
+
+    .descuento
+        .container
+            .row 
+                .col-md-6
+                    .contenido 
+                        h3 5% de Descuento
+                        p.titulo Viaje a Canada 
+                        p.fecha 20 Marzo de 2024 - 28 Marzo de 2024
+                        p.precio $2500
+
+    .container
+        h2.mt-5.text-center Testimoniales
+
+            include ./layout/bloque_testimonios.pug
